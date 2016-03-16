@@ -7,7 +7,8 @@ fn main () {
     if target.ends_with("-apple-darwin") {
         // Use libosxfuse on OS X
         pkg_config::find_library("osxfuse").unwrap();
-    } else if target.ends_with("-unknown-linux-gnu") || target.ends_with("-unknown-freebsd") {
+    } else if target.ends_with("-unknown-linux-gnu") || target.ends_with("-unknown-freebsd")
+           || target.ends_with("-unknown-linux-musl") {
         // Use libfuse on Linux and FreeBSD
         pkg_config::find_library("fuse").unwrap();
     } else {
