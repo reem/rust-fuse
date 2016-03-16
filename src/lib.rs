@@ -34,7 +34,7 @@ pub use request::Request;
 pub use session::{Session, BackgroundSession};
 
 mod argument;
-mod channel;
+pub mod channel;
 mod fuse;
 mod reply;
 mod request;
